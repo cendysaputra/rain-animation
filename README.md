@@ -19,7 +19,6 @@ Background rain animation with ripple effects, grain texture overlay, and smooth
 
 - Vanilla JS + Canvas API — rain & ripple animation
 - [GSAP](https://gsap.com/) + ScrollTrigger — scroll-driven text transitions (bundled locally in `lib/`)
-- Google Fonts — Instrument Serif, Inter
 - Plain CSS — no framework
 
 ## Project Structure
