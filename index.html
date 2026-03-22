@@ -2,27 +2,22 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Rain Animation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section class="hero">
-      <!-- Grain overlay via CSS pseudo-element -->
-      <!-- Canvas untuk animasi hujan -->
       <canvas id="rainCanvas"></canvas>
 
       <div class="hero-content">
         <div class="text-panel" data-panel="1">
           <h1>Every drop is a beginning.</h1>
           <p>
-            Rain never asks for permission to fall. It simply falls —
+            Rain never asks for permission to fall. It simply falls
             and from there, everything grows.
           </p>
         </div>
@@ -30,7 +25,7 @@
         <div class="text-panel" data-panel="2">
           <p>
             There is a calm behind the sound of rain repeating itself.
-            Each drop touches the surface, forms a ripple, then fades —
+            Each drop touches the surface, forms a ripple, then fades
             but its trace remains.
           </p>
           <p>
@@ -47,7 +42,6 @@
         </div>
       </div>
 
-      <!-- Dot navigation -->
       <nav class="dot-nav" aria-label="Section navigation">
         <button class="dot active" data-target="1" aria-label="Section 1"></button>
         <button class="dot" data-target="2" aria-label="Section 2"></button>
@@ -55,10 +49,20 @@
       </nav>
     </section>
 
-    <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="lib/gsap.min.js"></script>
+    <script src="lib/ScrollTrigger.min.js"></script>
     <script src="rain.js"></script>
     <script src="scroll-text.js"></script>
+    <script>
+      document.addEventListener("wheel", function (e) {
+        if (e.ctrlKey) e.preventDefault();
+      }, { passive: false });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.ctrlKey && (e.key === "+" || e.key === "-" || e.key === "=" || e.key === "0")) {
+          e.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>

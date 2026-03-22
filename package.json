@@ -1,0 +1,23 @@
+{
+  "name": "rain-animation",
+  "version": "1.0.0",
+  "main": "rain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cendysaputra/rain-animation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cendysaputra/rain-animation/issues"
+  },
+  "homepage": "https://github.com/cendysaputra/rain-animation#readme",
+  "description": "",
+  "dependencies": {
+    "gsap": "^3.14.2"
+  }
+}
